@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "612819903697",
+    "project_id": "course-manager-5ae92",
+    "storage_bucket": "course-manager-5ae92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612819903697:android:1f3dabeaae8ed5266811f0",
+        "android_client_info": {
+          "package_name": "com.example.course_manager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612819903697-udk0etkpgee7vo4p7fih2ivkm6leuq94.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.course_manager",
+            "certificate_hash": "1332e850a68311edcbc1ca71032ccac4b522fd6a"
+          }
+        },
+        {
+          "client_id": "612819903697-kst1ts9hd8o9vdrpr121m9orq72oso7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBh6CWDV8HVICoVJCp7TgCXEwQ4_e9wxSI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "612819903697-kst1ts9hd8o9vdrpr121m9orq72oso7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
