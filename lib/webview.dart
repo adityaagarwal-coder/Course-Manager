@@ -17,18 +17,24 @@ class _WebViewState extends State<WebView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(children: [
-        InAppWebView(initialUrlRequest: URLRequest(url: Uri.parse(widget.video))),
+        InAppWebView(
+            initialUrlRequest: URLRequest(url: Uri.parse(widget.video))),
         Align(
             alignment: Alignment.topRight,
-            child: Container(
-                margin: EdgeInsets.all(10),
-                height: 30,
-                width: 30,
-                child: InkWell(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Icon(Icons.close))))
+            child: InkWell(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(100)),
+                  // padding: EdgeInsets.all(5),
+                  margin: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                  height: 30,
+                  width: 30,
+                  child: Center(child: Icon(Icons.close))),
+            ))
       ]),
     );
   }
