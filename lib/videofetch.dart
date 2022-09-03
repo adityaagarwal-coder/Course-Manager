@@ -15,34 +15,32 @@ Widget fetchVideos(String collectionName) {
         );
       }
 
-      return Expanded(
-        child: ListView.builder(
-            shrinkWrap: true,
-            itemCount: snapshot.data == null ? 0 : snapshot.data!.docs.length,
-            itemBuilder: (_, index) {
-              DocumentSnapshot _documentSnapshot = snapshot.data!.docs[index];
+      return ListView.builder(
+          shrinkWrap: true,
+          itemCount: snapshot.data == null ? 0 : snapshot.data!.docs.length,
+          itemBuilder: (_, index) {
+            DocumentSnapshot _documentSnapshot = snapshot.data!.docs[index];
 
-              return InkWell(
-                onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) =>
-                          WebView(video: _documentSnapshot['video'])));
-                },
-                child: Card(
-                  elevation: 5,
-                  shape: RoundedRectangleBorder(
-                      side: BorderSide(color: Colors.purple),
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Container(
-                      height: 80,
-                      padding: EdgeInsets.symmetric(horizontal: 10),
-                      child: Center(
-                          child: Text(_documentSnapshot['Name'],
-                              style: TextStyle(fontWeight: FontWeight.bold)))),
-                ),
-              );
-            }),
-      );
+            return InkWell(
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) =>
+                        WebView(video: _documentSnapshot['video'])));
+              },
+              child: Card(
+                elevation: 5,
+                shape: RoundedRectangleBorder(
+                    side: BorderSide(color: Colors.purple),
+                    borderRadius: BorderRadius.circular(10)),
+                child: Container(
+                    height: 80,
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    child: Center(
+                        child: Text(_documentSnapshot['Name'],
+                            style: TextStyle(fontWeight: FontWeight.bold)))),
+              ),
+            );
+          });
     },
   );
 }
